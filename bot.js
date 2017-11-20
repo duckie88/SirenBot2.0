@@ -6,6 +6,7 @@ var bot = new Discord.Client();
 
 bot.on('ready', () => {
 	console.log(`Ready!`);
+	bot.user.setGame("!smh | !quack");
 });
 
 bot.on('message', message => {
@@ -42,6 +43,9 @@ bot.on('message', message => {
 
 		case "quack":
 			message.channel.sendMessage("I am the SMH Rotation Bot, first daughter of Duckie of House Pure Malice, First of Her Name, the Mascot, Nerd #1, Writer of Code and Mother of Bots.\n\n\n Have a request for another bot? Send her a DM. And maybe an offering of breadcrumbs.");
+			break;
+		case default:
+			message.channel.sendMessage("I don't understand. Try !smh or !quack");
 			break;
 	}
 
