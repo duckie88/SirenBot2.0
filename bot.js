@@ -6,7 +6,6 @@ var bot = new Discord.Client();
 
 bot.on('ready', () => {
 	console.log(`Ready!`);
-	bot.user.setGame("!smh | !quack");
 });
 
 bot.on('message', message => {
