@@ -24,7 +24,7 @@ bot.on('message', message => {
 			var days = today.getTime() - rotationStart.getTime();
 			days = Math.ceil(days / (1000 * 3600 * 24));
 			console.log(days);
-			var index = Math.round((days / 7) % 4);
+			var index = Math.floor((days / 7) % 4);
 			console.log(index);
 			if (index == 0) {
 				message.channel.sendMessage("This week the available map is Cursed Islands. Vargas is waiting for ye.\n\n\nLast week's map (expiring Saturday): Atlantis.");
