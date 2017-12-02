@@ -18,13 +18,12 @@ bot.on('message', message => {
 	switch (commands[0].toLowerCase()) {
 
 		case "smh":
-			var rotationStart = new Date("11/20/2017");
+			var rotationStart = new Date("11/18/2017");
 			var today = new Date();
-
-			var days = today.getTime() - rotationStart.getTime();
-			days = Math.ceil(days / (1000 * 3600 * 24));
+            		var milliseconds = today.getTime() - rotationStart.getTime();
+          		var days = milliseconds / (1000 * 3600 * 24);
 			console.log(days);
-			var index = Math.round((days / 7) % 4);
+			var index = ((Math.Floor(days / 7)) % 4);
 			console.log(index);
 			if (index == 0) {
 				message.channel.sendMessage("This week the available map is Cursed Islands. Vargas is waiting for ye.\n\n\nLast week's map (expiring Saturday): Atlantis.");
