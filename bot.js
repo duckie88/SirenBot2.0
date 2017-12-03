@@ -23,7 +23,7 @@ bot.on('message', message => {
             		var milliseconds = today.getTime() - rotationStart.getTime();
           		var days = milliseconds / (1000 * 3600 * 24);
 			console.log(days);
-			var week = Math.Floor(days / 7)
+			var week = Math.floor(days / 7)
 			var index = (week % 4);
 			console.log(index);
 			if (index == 0) {
