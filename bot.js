@@ -12,9 +12,8 @@ bot.on('message', message => {
 	if (!message.content.startsWith(PREFIX)) {
 		return;
 	}
-
 	var commands = message.content.substring(PREFIX.length).split(" ");
-
+	
 	switch (commands[0].toLowerCase()) {
 
 		case "smh":
@@ -46,6 +45,5 @@ bot.on('message', message => {
 	}
 
 });
-
 
 bot.login(process.env.BOT_TOKEN);
