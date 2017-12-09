@@ -20,9 +20,10 @@ bot.on('message', message => {
 			var rotationStart = new Date("11/18/2017");
 			var today = new Date();
             		var milliseconds = today.getTime() - rotationStart.getTime();
-          		var days = milliseconds / (1000 * 3600 * 24);
-			console.log(days);
-			var week = Math.floor(days / 7)
+          		var hours = milliseconds / (1000 * 3600);
+           		var days = ((hours - 1) / 24);
+            		console.log(days);
+           		var week = Math.floor(days / 7)
 			var index = (week % 4);
 			console.log(index);
 			if (index == 0) {
@@ -43,7 +44,6 @@ bot.on('message', message => {
 			message.channel.sendMessage("I am the SMH Rotation Bot, first daughter of Duckie of House Pure Malice, First of Her Name, the Mascot, Nerd #1, Writer of Code and Mother of Bots.\n\n\n Have a request for another bot? Send her a DM. And maybe an offering of breadcrumbs.");
 			break;
 	}
-
 });
 
 bot.login(process.env.BOT_TOKEN);
