@@ -21,9 +21,9 @@ bot.on('message', message => {
 			var today = new Date();
             		var milliseconds = today.getTime() - rotationStart.getTime();
           		var hours = milliseconds / (1000 * 3600);
-           		var days = ((hours - 5) / 24);
+           		var days = ((hours - 2) / 24);
             		console.log(days);
-           		var week = Math.floor(days / 7)
+           		var week = Math.floor(days / 7);
 			var index = (week % 4);
 			console.log(index);
 			if (index == 0) {
